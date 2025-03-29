@@ -10,6 +10,7 @@ env:
   NAME: Srinivas.Thoudoju
   AGE: 35
   OCCUPATION: Software Engineer
+  CITY: Hyderabad
 
 jobs:
   Example_EnvironmentVariable:
@@ -22,4 +23,5 @@ jobs:
           echo "My name is : ${{env.NAME}}"
           echo "My age is : ${{env.AGE}}"
           echo "My Occupation is : ${{env.OCCUPATION}}"
+          echo "I live in : ${{env.CITY}}"
       
