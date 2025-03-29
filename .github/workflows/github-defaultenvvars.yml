@@ -1,0 +1,22 @@
+name: Demo on GitHub Default Environment variables
+on:
+  push:
+    branches: 
+    - main
+    paths:
+    - .github/workflows/github-defaultenvvars.yml
+
+jobs:
+  Example_GithubDefaultEnvironmentVariables:
+    name: Demo on GitHub Default Environment Variables
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Default Environment Variables
+        shell: bash
+        run: |
+          echo "$GITHUB_REF" - "${{GITHUB.REF}}"
+          echo "$GITHUB_WORKFLOW" - "${{github.workflow}}"
+          echo "$GITHUB_RUNID" - "${{github.runid}}"
+          echo "$GITHUB_RUN_NUMBER" - ${{github_run_number}}"
+    
