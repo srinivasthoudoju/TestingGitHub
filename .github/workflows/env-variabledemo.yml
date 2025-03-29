@@ -25,4 +25,16 @@ jobs:
           echo "My age is : ${{env.AGE}}"
           echo "My Occupation is : ${{env.OCCUPATION}}"
           echo "I live in : ${{env.CITY}}"
+
+  Example_RepositoryVariables:
+    name: Demonstrating the repository variables
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository variables
+        shell: bash
+        run: |
+          echo "The Username is : ${{ vars.USERNAME }}"
+          echo "The Password is : ${{ secrets.PASSWORD}}"
+    
       
