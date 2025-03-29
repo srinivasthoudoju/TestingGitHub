@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Environment Variables
         run:  |
-          echo "My name is : ${{env.NAME}}"
+          echo "My name is : ${{env.NAME}} $env:NAME $NAME"
           echo "My age is : ${{env.AGE}}"
           echo "My Occupation is : ${{env.OCCUPATION}}"
           echo "I live in : ${{env.CITY}}"
