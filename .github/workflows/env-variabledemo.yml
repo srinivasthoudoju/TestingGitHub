@@ -1,0 +1,23 @@
+name: Demo on Enviornment variables
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/env-variabledemo.yml
+
+env:
+  NAME: Srinivas.Thoudoju
+  AGE: 35
+
+jobs:
+  Example_EnvironmentVariable:
+    name: Demonstrating Envrionment Variables
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Environment Variables
+        run:
+          echo "My name is : ${{env.NAME}}"
+          echo "My age is : ${{env.AGE}}"
+      
