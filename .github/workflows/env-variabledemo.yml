@@ -9,6 +9,7 @@ on:
 env:
   NAME: Srinivas.Thoudoju
   AGE: 35
+  OCCUPATION: Software Engineer
 
 jobs:
   Example_EnvironmentVariable:
@@ -20,4 +21,5 @@ jobs:
         run:  |
           echo "My name is : ${{env.NAME}}"
           echo "My age is : ${{env.AGE}}"
+          echo "My Occupation is : ${[env.OCCUPATION}}"
       
