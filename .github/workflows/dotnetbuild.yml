@@ -2,7 +2,7 @@ name: dotnet build
 on:
   push:
     branches:
-      - main
+      - srinivas_patch
     paths:
       - .github/workflows/dotnetbuild.yml
       - HelloWorldApp
@@ -20,6 +20,9 @@ jobs:
 
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
+
+      - name: Display .NET SDK Version
+        run: dotnet --version
 
       - name: Build the HelloWorldApplication
         run: dotnet build HelloWorldApp --configuration Release
