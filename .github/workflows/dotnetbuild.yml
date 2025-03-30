@@ -2,7 +2,7 @@ name: dotnet build
 on:
   push:
     branches:
-      - srinivas_patch
+      - main
     paths:
       - .github/workflows/dotnetbuild.yml
       - HelloWorldApp
