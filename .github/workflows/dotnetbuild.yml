@@ -27,7 +27,7 @@ jobs:
         run: dotnet --version
 
       - name: Build the HelloWorldApplication
-        run: dotnet build HelloWorldApp/HelloWorldApp.sln --configuration Release --verbosity normal
+        run: dotnet build HelloWorldApp/HelloWorldApp.sln --configuration Release --no-cache --verbosity normal
 
       - name: Run the HelloWorldApplication
         run: |
