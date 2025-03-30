@@ -40,6 +40,15 @@ jobs:
       - name: Lista all the files
         run: ls -la
 
+      - name: Verify Build Output
+        run: |
+          echo "Checking HelloWorldApp/bin..."
+          ls -la HelloWorldApp/bin || echo "No bin folder found!"
+          echo "Checking HelloWorldApp/bin/Release..."
+          ls -la HelloWorldApp/bin/Release || echo "No Release folder found!"
+          echo "Checking HelloWorldApp/bin/Release/net8.0..."
+          ls -la HelloWorldApp/bin/Release/net8.0 || echo "No net8.0 folder found!"
+
       - name: Upload BuildArtifacts
         uses: actions/upload-artifact@v4
         with:
