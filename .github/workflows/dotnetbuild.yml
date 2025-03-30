@@ -25,7 +25,7 @@ jobs:
         run: dotnet --version
 
       - name: Build the HelloWorldApplication
-        run: dotnet build HelloWorldApp --configuration Release
+        run: dotnet build HelloWorldApp/HelloWorldApp.sln --configuration Release
 
       - name: Lista all the files
         run: ls -la
