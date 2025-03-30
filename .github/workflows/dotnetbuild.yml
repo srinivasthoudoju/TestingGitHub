@@ -15,12 +15,14 @@ jobs:
     steps:
       - name: Chekcout the sourcecode
         uses: actions/checkout@v4
-
       - name: List all the files
         run: ls -l
 
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+
       - name: Build the HelloWorldApplication
-        run: dotnet build --configuration Release
+        run: dotnet build HelloWorldApp --configuration Release
 
       - name: Lista all the files
         run: ls -l
