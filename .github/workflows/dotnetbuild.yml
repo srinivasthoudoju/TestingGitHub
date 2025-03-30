@@ -34,7 +34,7 @@ jobs:
         run: ls -la
 
       - name: Upload Artifacts
-        uses: actions/uploadartifacts@v4
+        uses: actions/uploadartifact@v4
         with:
           name: HelloWorldApp
           path: TestingGitHub
