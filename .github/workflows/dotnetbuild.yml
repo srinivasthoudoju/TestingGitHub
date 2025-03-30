@@ -33,8 +33,8 @@ jobs:
       - name: Lista all the files
         run: ls -la
 
-      - name: Upload Artifacts
-        uses: actions/uploadartifact@v4
+      - name: Upload BuildArtifacts
+        uses: actions/upload-artifact@v4
         with:
           name: HelloWorldApp
           path: TestingGitHub
