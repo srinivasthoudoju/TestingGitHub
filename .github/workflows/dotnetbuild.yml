@@ -28,7 +28,7 @@ jobs:
         run: dotnet build HelloWorldApp/HelloWorldApp.sln --configuration Release
 
       - name: Display the GitHubWorkspace
-        run: echo "$GITHUB_WORKSPACE
+        run: echo "$GITHUB_WORKSPACE"
 
       - name: Lista all the files
         run: ls -la
