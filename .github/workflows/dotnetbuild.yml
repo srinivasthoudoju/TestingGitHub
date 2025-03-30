@@ -2,7 +2,7 @@ name: dotnet build
 on:
   push:
     branches:
-      - main
+      - srinivas_patch
     paths:
       - .github/workflows/dotnetbuild.yml
       - HelloWorldApp
@@ -36,5 +36,5 @@ jobs:
       - name: Upload BuildArtifacts
         uses: actions/upload-artifact@v4
         with:
-          name: HelloWorldApp
-          path: TestingGitHub
+          name: Hello-World-App
+          path: ${{github.workspace}}/HelloWorldApp/bin/Release
