@@ -28,6 +28,6 @@ jobs:
 
       - name: Run the HelloWorldApplication
         run: |
-          cd HelloWorldApp
+          cd Hello-World-App
           dotnet HelloWorldApp.dll
   
