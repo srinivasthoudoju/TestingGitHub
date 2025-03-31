@@ -37,5 +37,5 @@ jobs:
       - name: Run the HelloWorldApplication
         run: |
           cd Hello-World-App
-          dotnet HelloWorldApp.dll
+          dotnet net8.0/HelloWorldApp.dll
   
