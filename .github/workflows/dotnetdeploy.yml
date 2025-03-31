@@ -25,7 +25,7 @@ jobs:
 
       - name: List all the downloaded artifacts
         run: |
-          ls -R Hello-World-App"
+          ls -R Hello-World-App
           pwd
 
       - name: Find the actual dll path
