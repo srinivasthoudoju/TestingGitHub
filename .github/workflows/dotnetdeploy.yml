@@ -12,11 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Display the GitHubToken information
+        run: echo "${{github.token}}"
+        
       - name: Deploy the artifacts
         uses: actions/download-artifact@v4
         with:
           name: Hello-World-App
           path: Hello-World-App
+          github-token: ${{github.token}}
           run-id: 14166713720
 
       - name: List all the downloaded artifacts
