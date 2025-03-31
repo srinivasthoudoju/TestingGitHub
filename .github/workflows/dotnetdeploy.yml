@@ -24,8 +24,16 @@ jobs:
           run-id: 14166713720
 
       - name: List all the downloaded artifacts
-        run: ls -R Hello-World-App
+        run: |
+          ls -R Hello-World-App"
+          pwd
 
+      - name: Find the actual dll path
+        run: |
+          cd Hello-World-App
+          # Find the actual DLL path
+          find . -name "*.dll" -type f
+          
       - name: Run the HelloWorldApplication
         run: |
           cd Hello-World-App
