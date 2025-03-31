@@ -25,4 +25,9 @@ jobs:
 
       - name: List all the downloaded artifacts
         run: ls -R Hello-World-App
+
+      - name: Run the HelloWorldApplication
+        run: |
+          cd HelloWorldApp
+          dotnet run
   
