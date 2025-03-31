@@ -35,7 +35,7 @@ jobs:
           cd HelloWorldApp
           dotnet run
 
-      - name: Display the GitHubWorkspace
+      - name: Display the GitHubWorkspaceDe
         run: echo "$GITHUB_WORKSPACE"
 
       - name: Lista all the files
@@ -55,3 +55,20 @@ jobs:
         with:
           name: Hello-World-App
           path: ${{github.workspace}}/HelloWorldApp/bin/Release/**
+    
+  HelloWorldApp_Deploy:
+    name: Deploy HelloWorldApp
+    runs-on: ubuntu-latest
+    needs:  HelloWorldApp_BasicProject
+
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Hello-World-App
+          path: artifact
+
+      - name: display structure of downlioaded files
+        run: ls -R artifact
+          
+  
