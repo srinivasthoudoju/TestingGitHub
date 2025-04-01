@@ -17,7 +17,7 @@ on:
 jobs:
   Example_Inputs:
     name: Demonstrating the Inputs
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       - name: Accessing the Name inputs
