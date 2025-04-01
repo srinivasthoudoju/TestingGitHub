@@ -1,0 +1,19 @@
+name: Demo on input exmaples
+on:
+  push:
+  inputs:
+    name:
+      description: 'Name'
+      type: string
+      default: 'test'
+
+jobs:
+  Example_Inputs:
+    name: Demonstrating the inputs example
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Accessing Inputs
+        run: echo "${{ inputs. name}}"
+
+      
