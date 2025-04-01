@@ -1,11 +1,11 @@
 name: Demo on input exmaples
 on:
-  push:
-  inputs:
-    name:
-      description: 'Name'
-      type: string
-      default: 'test'
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        type: string
+        default: 'test'
 
 jobs:
   Example_Inputs:
