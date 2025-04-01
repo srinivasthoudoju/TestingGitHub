@@ -1,0 +1,32 @@
+name: Demo on inputs
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        type: string
+        default: 'test'
+      age:
+        description: 'Age'
+        type: number
+        required: true
+      Married:
+        description: 'Married'
+        type: choice
+
+jobs:
+  Example_Inputs:
+    name: Demonstrating the Inputs
+    runs-on: ubuntu
+
+    steps:
+      - name: Accessing the Name inputs
+        run: echo "${{ inputs.name }}"
+
+      - name: Accessing the Age inputs
+        run: echo "${{ inputs.age }}"
+
+      - name: Accessing the Married inputs
+        run: echo "${{ inputs.Married }}"
+    
+        
