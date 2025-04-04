@@ -1,3 +1,4 @@
+name: GitVersionAndRetention
 on:
   workflow_dispatch:
     outputs:
