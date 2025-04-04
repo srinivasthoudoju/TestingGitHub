@@ -1,19 +1,36 @@
-name: Demo on input exmaples
+name: Workflow Inputs
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Name'
-        type: string
-        default: 'test'
+ workflow_dispatch:
+  inputs:
+    name:
+      description: 'name'
+      type: string
+      default: 'test'
+    age:
+      description: 'Age'
+      type: integer
+      required: true
+    gender:
+      description: 'Gender'
+      type: choice
+      options:
+        - male
+        - female
+    Married:
+      description: 'Is Married?'
+      type: boolean
 
 jobs:
   Example_Inputs:
-    name: Demonstrating the inputs example
+    name: ExampleInputs
     runs-on: ubuntu-latest
 
     steps:
-      - name: Accessing Inputs
-        run: echo "${{ inputs. name}}"
-
-      
+      - name: Accessing Name inputs
+        run: echo "${{ inputs.name }}"
+      - name: Accessing Age inputs
+        run: echo "${{ inputs.age }}"
+      - name: Accessing Gender inputs
+        run: echo "${{ inputs.gender }}"
+      - name: Accessing Married inputs
+        run: echo "${{ inputs.Married }}"
