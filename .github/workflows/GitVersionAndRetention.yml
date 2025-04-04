@@ -41,6 +41,12 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
+
+      - name: Display GitVersion Information
+        run: |
+          echo "${{ outputs.GIT_TAG }}"
+          echo "${{ outputs.ARTIFACT_RETENTION_IN_DAYS }}"
+          echo "${{ outputs.TARGET_BRANCH }}"
         
       #determine the current branch, and author/edit a dynamic GitVersion.yml file such that the merge group is considered to be part of the target branch (instead of dev).
       - name: Set PR/Merge Context
