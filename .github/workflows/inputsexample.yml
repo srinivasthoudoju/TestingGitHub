@@ -14,8 +14,8 @@ on:
       description: 'Gender'
       type: choice
       options:
-        - male
-        - female
+        - Male
+        - Femali
     Married:
       description: 'Is Married?'
       type: boolean
