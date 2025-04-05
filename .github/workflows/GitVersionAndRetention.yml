@@ -31,9 +31,10 @@ jobs:
 
       - name: Display GitVersion Information
         run: |
-          echo "${{ outputs.GIT_TAG }}"
-          echo "${{ outputs.ARTIFACT_RETENTION_IN_DAYS }}"
-          echo "${{ outputs.TARGET_BRANCH }}"
+          echo "GIT_TAG: ${{ steps.validateTag.outputs.version }}"
+          echo "ARTIFACT_RETENTION_IN_DAYS: ${{ steps.set-retention.outputs.ARTIFACT_RETENTION_IN_DAYS }}"
+          echo "TARGET_BRANCH: ${{ steps.branchDetails.outputs.TargetBranchName }}"
+          echo "TARGET_BRANCH_PROPER: ${{ steps.branchDetails.outputs.TargetBranchProperName }}"
         
       #determine the current branch, and author/edit a dynamic GitVersion.yml file such that the merge group is considered to be part of the target branch (instead of dev).
       - name: Set PR/Merge Context
