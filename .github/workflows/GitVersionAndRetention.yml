@@ -1,20 +1,7 @@
 name: GitVersionAndRetention
 on:
   workflow_dispatch:
-    outputs:
-      GIT_TAG:
-        description: "Git version calculated for repo."
-        value: ${{ jobs.setup.outputs.GIT_TAG }}
-      ARTIFACT_RETENTION_IN_DAYS:
-        description: "Number of days to retain artifacts."
-        value: ${{ jobs.setup.outputs.ARTIFACT_RETENTION_IN_DAYS }}
-      TARGET_BRANCH:
-        description: The name of the branch being targetted by the current PR/MG context.
-        value: ${{ jobs.setup.outputs.TARGET_BRANCH }}
-      TARGET_BRANCH_PROPER:
-        description: The name of the long running branch being targetted by the current PR/MG context.
-        value: ${{ jobs.setup.outputs.TARGET_BRANCH_PROPER }} 
-
+    
 jobs:
   setup:
     name: "Setup"
